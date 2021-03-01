@@ -1,4 +1,5 @@
 from flask import Flask, session, render_template, request, redirect, g, url_for
+import requests
 import sqlite3
 import os
 app = Flask(__name__)
@@ -45,12 +46,17 @@ def dropsession():
 
 @app.route('/show_memes')
 def show():
+    print(session['user'])
     connection = sqlite3.connect('data.db')
     cursor = connection.cursor()
     update_query = "UPDATE users SET consent=1 WHERE username=?"
     cursor.execute(update_query, (session['user'],))
     connection.commit()
     connection.close()
+
+    response = requests.get('https://api.imgflip.com/get_memes')
+    print(response.json())
+
     return render_template('memes.html')
 
 
