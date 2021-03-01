@@ -65,6 +65,7 @@ pytestdebug.log
 *.mo
 *.pot
 
+
 # Django stuff:
 *.log
 local_settings.py
@@ -144,5 +145,6 @@ dmypy.json
 
 # profiling data
 .prof
+.db
 
 # End of https://www.toptal.com/developers/gitignore/api/flask
