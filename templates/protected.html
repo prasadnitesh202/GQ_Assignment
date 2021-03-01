@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Logged in, Hello {{user}}</h1>
+    <div class="container">
+        <p>
+            Your cookie Information is {{request.cookies['session']}}
+        </p>
+
+        <p>
+            Do you give us consent to store your cookies?
+            <button onclick="window.location='http://localhost:5000/show_memes'" > Yes</button>
+            <button onclick="window.location='http://localhost:5000/drop_session'"> No </button>
+        </p>
+    </div>
+    <button type="submit" onclick="window.location='http://localhost:5000/drop_session'"> Logout </button>
+</body>
+</html>
