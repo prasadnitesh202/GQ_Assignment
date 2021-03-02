@@ -7,8 +7,16 @@
     <title>Memes</title>
 </head>
 <body>
+    <button type="submit" onclick="window.location='http://localhost:5000/drop_session'"> Logout </button>
 
     <h1> Display Memes </h1>
+    {% for dict_item in memes %}
+   {% for key, value in dict_item.items() %}
+      <img src="{{value}}"/>
+      <!-- <h2>Value: {{value}}</h2> -->
+   {% endfor %}
+{% endfor %}
+
     
 </body>
 </html>

@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles/index.css">
     <title>Login Page</title>
 </head>
 <body>
-    <h1>Login Form</h1>
-    <form action='/' method="post">
+    <h1 style="text-align: center;">Login Form</h1>
+    <!-- <form action='/' method="post">
     <input type="text" name="username" required/>
     <input type="password" name="password" required />
     <button type="submit">Login</button>
 
-    </form>
+    </form> -->
+    <div class="login"> 
+
+    <form action="/" method="post">
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="username" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="password" id="Pass" placeholder="Password">    
+        <br><br>    
+        <button type="submit" name="log" id="log">Log In</button>>         
+      </form>
+
+      </div>
 </body>
 </html>
